@@ -1,0 +1,24 @@
+# -*- org -*-
+
+* Recent Feeds
+
+Recent Feeds is an application to help monitor Delicious.com RSS
+feeds.  I often will look at a Delicious page for a given tag (say,
+http://www.delicious.com/tag/emacs/) to see what people are
+bookmarking.  Delicious provides a corresponding RSS feed, but there
+are so many repeats (as the feed contains an entry for every time
+someone bookmarks a given URL), that the useful information is lost in
+the noise.  Delicious already tracks a URL with uniqueness, so the
+information is there to do the appropriate filtering.
+
+Recent Feeds is the solution to this.  Each user that registers on the
+site can subscribe to any feed from Delicious.com and it will track
+each bookmarked URL seen across that user's subscribed feeds.  A
+corresponding RSS URL on Recent Feeds will be given for the user to
+subscribe to in their feed reader.  That feed will only contain
+entries for bookmarks the user has not yet seen before across any of
+their subscribed feeds.
+
+* Setup and installation
+
+TODO
