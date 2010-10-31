@@ -19,6 +19,11 @@ subscribe to in their feed reader.  That feed will only contain
 entries for bookmarks the user has not yet seen before across any of
 their subscribed feeds.
 
+* Naming
+
+The Django application itself is named "gourmetfeeds".  Gourmet food
+is unique and delicious.  So are your feeds from Recent Feeds.
+
 * Setup and installation
 
 TODO

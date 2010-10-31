@@ -90,7 +90,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'south'
+    'south',
+    'gourmetfeeds',
 )
 
 # Get any local overrides

@@ -3,3 +3,4 @@
 logs/
 recentfeeds/settings.py
 *.ropeproject/
+recentfeeds/recentfeed.db
