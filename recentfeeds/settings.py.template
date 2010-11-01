@@ -24,4 +24,4 @@ DATABASES = {
 }
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'jjf3%$&-400js+q-gx%uzul3539@$(dg(#7lmvvh*)z^a65+&@'
+SECRET_KEY = 'foo'

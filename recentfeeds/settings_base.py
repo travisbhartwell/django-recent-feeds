@@ -3,7 +3,7 @@ import os.path
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -61,13 +61,12 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'jjf3%$&-400js+q-gx%uzul3539@$(dg(#7lmvvh*)z^a65+&@'
+SECRET_KEY = 'foo'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,17 +84,14 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    # Django Contrib
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    # 3rd Party
     'south',
+    # Project
     'gourmetfeeds',
 )
-
-# Get any local overrides
-try:
-    from settings_local import *
-except ImportError:
-    pass
