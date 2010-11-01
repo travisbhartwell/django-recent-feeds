@@ -1,1 +1,11 @@
-<h1>You are successfully logged in!</h1>
+{% extends "base.html" %}
+
+{% block title %}Welcome - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+  {% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}.  Thanks for logging in </p>
+  {% else %}
+    <p>You shouldn't see this Mr. Anonymous</p>
+  {% endif %}
+{% endblock %}
