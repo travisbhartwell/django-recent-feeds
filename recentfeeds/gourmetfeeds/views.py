@@ -18,4 +18,4 @@ def welcome(request):
 def feeds(request):
     queryset = Feed.objects.filter(user=request.user).order_by('subscribed_date')
 
-    return list_detail.object_list(request, queryset, template_object_name='feeds')
+    return list_detail.object_list(request, queryset)
