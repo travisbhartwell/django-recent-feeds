@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Subscribed feeds for {{ user.username }} - {{ block.super }}{% endblock %}
+
+{% block main_content %}
+  {% if feeds_list %}
+  <table>
+    <thead>
+      <tr>
+	<th>Date Subscribed</ht>
+	<th>URL</th>
+	<th>Title</th>
+	<th>Description</th>
+      </tr>
+    </th>
+    <thead>
+    <tbody>
+      {% for feed in feeds_list %}
+	<tr>
+	  <td>{{ feed.subscribed_date }}</td>
+	  <td>{{ feed.source }}</td>
+	  <td>{{ feed.title }}</td>
+	  <td>{{ feed.description }}</td>
+	</tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>You have not yet subscribed to any feeds.</p>
+{% endif %}
+{% endblock %}

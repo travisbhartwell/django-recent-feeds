@@ -64,6 +64,7 @@ ADMIN_MEDIA_PREFIX = '/media/'
 SECRET_KEY = 'foo'
 
 LOGIN_REDIRECT_URL = '/gourmetfeeds/'
+LOGIN_URL = '/gourmetfeeds/login/'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
