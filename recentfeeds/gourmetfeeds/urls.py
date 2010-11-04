@@ -4,6 +4,7 @@ from django.conf.urls.defaults import patterns, url
 urlpatterns = patterns('gourmetfeeds.views',
                        url(r'^$', 'welcome', name='gourmetfeeds_welcome'),
                        url(r'feeds/$', 'feeds', name='gourmetfeeds_feeds'),
+                       url(r'f/(?P<username>[^/]+)/(?P<path>.*)$', 'rss', name='gourmetfeeds_rss'),
 )
 
 # Account management URLs
