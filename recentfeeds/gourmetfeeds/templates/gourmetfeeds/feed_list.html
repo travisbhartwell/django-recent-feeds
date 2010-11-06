@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
+{% load feed_tags %}
+
 {% block title %}Subscribed feeds for {{ user.username }} - {{ block.super }}{% endblock %}
 
 {% block main_content %}
-  {% if feeds_list %}
+  {% if object_list %}
   <table>
     <thead>
       <tr>
@@ -11,16 +13,18 @@
 	<th>URL</th>
 	<th>Title</th>
 	<th>Description</th>
+	<th>Your GourmetFeed URL</th>
       </tr>
     </th>
     <thead>
     <tbody>
-      {% for feed in feeds_list %}
+      {% for feed in object_list %}
 	<tr>
 	  <td>{{ feed.subscribed_date }}</td>
 	  <td>{{ feed.source }}</td>
 	  <td>{{ feed.title }}</td>
 	  <td>{{ feed.description }}</td>
+	  <td>{% gourmet_feed_url feed %}</td>
 	</tr>
       {% endfor %}
     </tbody>
